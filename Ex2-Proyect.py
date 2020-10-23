@@ -75,32 +75,25 @@ while True:
 
     elif comando == 2:
         agregarIngreso()
-        pass
 
     elif comando == 3:
         agregarEgreso()
-        pass
 
     elif comando == 4:
         checkMoney()
-        pass
 
     elif comando == 5:
         reportIncome()
-        pass
 
     elif comando == 6:
         reportOutcome()
-        pass
 
     elif comando == 7:
         print(
             "la lista entera de transacciones en su cuenta se ve de esta manera [Ingresos],[Egresos]"
         )
         reportTransact()
-        pass
 
     elif comando == 8:
         print("la cantidad actual de dinero en su cuenta es...")
         reportAccount()
-        pass

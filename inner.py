@@ -4,12 +4,12 @@ class Finance:
         self.totalMoney = 0
 
     def currentCash(self):
-        self.totalMoney = Income.inMoney - Outcome.outMoney
+        self.totalMoney = Income.addIn(self) - Outcome.addOut(self)
         return self.totalMoney
 
     def getAllMovements(self):
-        self.totalList.append(Income.inList)
-        self.totalList.append(Outcome.outList)
+        self.totalList.append(Income.getAllIns(self))
+        self.totalList.append(Outcome.getAllOuts(self))
         return self.totalList
 
 
@@ -19,12 +19,12 @@ class Income:
         self.inMoney = 0
 
     def addIn(self):
-        self.inMoney = int(input("inserte la cantidad que quiere ingresar: "))
+        self.inMoney += int(input("inserte la cantidad que quiere ingresar: "))
         self.inList.append(self.inMoney)
         return self.inMoney
 
     def getAllIns(self):
-        return self.inList
+        return print(self.inList)
 
 
 class Outcome:
@@ -33,9 +33,9 @@ class Outcome:
         self.outMoney = 0
 
     def addOut(self):
-        self.outMoney = int(input("inserte la cantidad que quiere egresar: "))
+        self.outMoney += int(input("inserte la cantidad que quiere egresar: "))
         self.outList.append(self.outMoney)
         return self.outMoney
 
     def getAllOuts(self):
-        return self.outList
+        return print(self.outList)

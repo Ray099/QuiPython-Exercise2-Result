@@ -55,7 +55,6 @@ def reportAccount():
 
 while True:
     print("Menu: \n")
-    comando = int(input("presiona un numero para selecionar la opcion apropiada: "))
     print("(0) salir")
     print("(1) iniciar sistema ")
     print("(2) agregar ingresos ")
@@ -65,6 +64,7 @@ while True:
     print("(6) generar reporte de egresos ")
     print("(7) generar reporte de transacciones ")
     print("(8) generar reporte de toda la cuenta ")
+    comando = int(input("presiona un numero para selecionar la opcion apropiada: "))
 
     if comando == 0:
         print("Hasta la proxima veeeeeezzz....\n")
@@ -72,6 +72,7 @@ while True:
 
     elif comando == 1:
         iniciarPrograma()
+        print("Se da inicio al programa Finace EX2")
 
     elif comando == 2:
         agregarIngreso()

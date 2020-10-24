@@ -4,12 +4,12 @@ class Finance:
         self.totalMoney = 0
 
     def currentCash(self):
-        self.totalMoney = Income.addIn(self) - Outcome.addOut(self)
+        self.totalMoney = Income.inMoney - Outcome.outMoney
         return self.totalMoney
 
     def getAllMovements(self):
-        self.totalList.append(Income.getAllIns(self))
-        self.totalList.append(Outcome.getAllOuts(self))
+        self.totalList.append(Income.inList)
+        self.totalList.append(Outcome.outList)
         return self.totalList
 
 
